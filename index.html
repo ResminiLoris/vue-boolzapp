@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Boolzap</title>
+</head>
+<body>
+    <!-- background -->
+    <div id="background">
+        <div id="top"></div>
+    </div>
+    <!-- corpo -->
+    <div id="user-space" class="row">
+        <!-- sx -->
+        <div class="col-md-4 p-0">
+            <div class="col-md-12 user-tag d-flex align-items-center">
+                <div class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_4.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+                <!-- icone -->
+                <div class="col-md-4 p-3">
+                    <i class="fas fa-redo-alt"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- Notifica -->
+            <div class="col-md-12 p-3 alert m-0">
+                <div class="image-circle d-inline-block align-middle position-relative">
+                    <i class="fas fa-bell-slash"></i>
+                </div>
+                <div class="d-inline-block align-middle">
+                    <span class="fs-5">Ricevi notifiche di nuovi messaggi</span>
+                    <div><span class="fw-light text-decoration-underline">Attiva notifiche desktop</span></div>
+                </div>
+            </div>
+            <!-- contatti -->
+            <div class="contact-list">
+                <div id="contact-1" class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+                <div id="contact-2" class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_2.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+                <div id="contact-3" class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_3.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+                <div id="contact-4" class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_5.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+            </div>
+        </div>
+        <!-- dx -->
+        <div id="chat" class="col-md-8 p-0">
+            <!-- barra contatto chat -->
+            <div class="col-md-12 user-tag d-flex align-items-center">
+                <div class="col-md-8 p-3">
+                    <div class="image-circle d-inline-block align-middle">
+                        <img class="img-fluid" src="./img/avatar_1.jpg" alt="">
+                    </div>
+                    <span class="align-middle fs-5">Nome Utente</span>
+                </div>
+                <!-- icone -->
+                <div class="col-md-4 p-3">
+                    <i class="fas fa-redo-alt"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- messaggi -->
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <div class="message">
+                        <span>Ciao come stai?</span>
+                    </div>
+                </div>
+            </div>
+            <!-- barra chat -->
+            <div id="chat-bar" class="col-md-12 user-tag d-flex align-items-center">
+                <div class="col-md-12 p-3">
+                    <div class="row align-items-center">
+                        <!-- icona smile -->
+                        <div class="col-md-2">
+                            <i class="far fa-smile fs-2 icon-gray a"></i>
+                        </div>
+                        <!-- input testo -->
+                        <div class="col-md-8">
+                            <div class="input-group mb-3 chat-text">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <!-- icona microfono -->
+                        <div class="col-md-2">
+                            <i class="fas fa-microphone fs-2 icon-gray"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
