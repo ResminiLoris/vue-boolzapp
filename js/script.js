@@ -5,6 +5,7 @@ Vue.config.devtools = true;
 const app = new Vue({
   el: '#app',
   data: {
+  currentChat: 0,
   user:{
     name: 'Resmini Loris',
     avatar: '_io',
@@ -95,5 +96,10 @@ const app = new Vue({
     },
   ],
   },
-  methods: {},
+  methods: {
+    //cambio chat al click sul contatto
+    goToCurrentChat(index){
+      this.currentChat = index;
+    }
+  },
 });

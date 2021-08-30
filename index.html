@@ -86,7 +86,7 @@
             <!-- Users list -->
             <section class="flex-grow-1 overflow-auto bg-white">
               <ul class="m-0 p-0">
-                <li class="media" v-for= "contact in contacts">
+                <li @click="goToCurrentChat(index)" class="media" v-for= "(contact, index) in contacts">
                   <figure>
                     <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" alt="Marco Lanci" />
                   </figure>
@@ -108,10 +108,10 @@
             >
               <div class="media">
                 <figure>
-                  <img src="img/avatar_2.jpg" alt="Marco Lanci" />
+                  <img v-bind:src="'img/avatar'+contacts[currentChat].avatar+'.jpg'" v-bind:alt="contacts[currentChat].name" />
                 </figure>
                 <div class="h6 media-text">
-                  <div>Marco Lanci</div>
+                  <div>{{contacts[currentChat].name}}</div>
                   <div class="media-secondary-text fw-light">
                     <small>Ultimo accesso oggi alle</small>
                   </div>
@@ -134,16 +134,10 @@
             <!-- Chat messages -->
             <div class="flex-grow-1 overflow-auto bg-chat-image">
               <ul>
-                <li class="message-container p-3 sent">
+                <li class="message-container p-3" v-bind:class="message.status" v-for="(message in contacts[currentChat].messages">
                   <div class="message p-2 rounded-3">
-                    <p>Hai portato a spasso il cane?</p>
-                    <time datetime="2021-08-03T09:53">10/01/2020 - 09:53</time>
-                  </div>
-                </li>
-                <li class="message-container p-3 received">
-                  <div class="message p-2 rounded-3">
-                    <p>Sì!</p>
-                    <time datetime="2021-08-03T10:07">10/01/2020 - 10:07</time>
+                    <p>{{message.message}}</p>
+                    <time datetime=>{{message.date}}</time>
                   </div>
                 </li>
               </ul>
