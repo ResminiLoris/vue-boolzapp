@@ -81,12 +81,14 @@
                 type="text"
                 class="w-100"
                 placeholder="Cerca o inizia una nuova chat..."
+                v-model="filter"
+                
               />
             </section>
             <!-- Users list -->
             <section class="flex-grow-1 overflow-auto bg-white">
               <ul class="m-0 p-0">
-                <li @click="goToCurrentChat(index)" class="media" v-for= "(contact, index) in contacts">
+                <li @click="goToCurrentChat(index)" class="media" v-for= "(contact, index) in contacts" v-if="isVisible(contact.name)">
                   <figure>
                     <img v-bind:src="'img/avatar'+contact.avatar+'.jpg'" alt="Marco Lanci" />
                   </figure>

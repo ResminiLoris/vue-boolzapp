@@ -105,7 +105,6 @@ const app = new Vue({
     },
     //stampo nuovo messaggio (user)
     submitMessage(){
-  
     newText = {
       date: '10/01/2020 16:15:22',
       message: this.newMessage,
@@ -114,7 +113,18 @@ const app = new Vue({
     
     this.contacts[this.currentChat].messages.push(newText);
     this.newMessage="";
-    
-    }
+    },
+
+    isVisible(filtraggio){
+      var result = false;
+
+      if (this.filter.trim() == '')
+          result = true;
+      else {
+          result = filtraggio.includes(this.filter.trim());
+      }    
+
+      return result;
+  },
   },
 });
