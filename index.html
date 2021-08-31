@@ -150,10 +150,7 @@
                 </div>
                 <div class="col-10">
                   <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Scrivi un messaggio"
-                  />
+                    type="text"class="form-control"placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter= "submitMessage()"/>
                 </div>
                 <div class="col-1">
                   <i

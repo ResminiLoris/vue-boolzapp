@@ -6,6 +6,7 @@ const app = new Vue({
   el: '#app',
   data: {
   currentChat: 0,
+  newMessage: "",
   user:{
     name: 'Resmini Loris',
     avatar: '_io',
@@ -100,6 +101,18 @@ const app = new Vue({
     //cambio chat al click sul contatto
     goToCurrentChat(index){
       this.currentChat = index;
+    },
+    //stampo nuovo messaggio (user)
+    submitMessage(){
+  
+    newText = {
+      date: '10/01/2020 16:15:22',
+      message: this.newMessage,
+      status: 'sent',
+    } 
+    
+    this.contacts[this.currentChat].messages.push(newText);
+    
     }
   },
 });
