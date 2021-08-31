@@ -7,6 +7,7 @@ const app = new Vue({
   data: {
   currentChat: 0,
   newMessage: "",
+  filter: "",
   user:{
     name: 'Resmini Loris',
     avatar: '_io',
@@ -112,6 +113,7 @@ const app = new Vue({
     } 
     
     this.contacts[this.currentChat].messages.push(newText);
+    this.newMessage="";
     
     }
   },
