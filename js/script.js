@@ -111,8 +111,17 @@ const app = new Vue({
       status: 'sent',
     } 
     
-    this.contacts[this.currentChat].messages.push(newText);
-    this.newMessage="";
+      this.contacts[this.currentChat].messages.push(newText);
+      this.newMessage="";
+
+      setTimeout(function(){ 
+      newResponse = {
+        date: '10/1/2020 16:15:22',
+        message: "ok",
+        status: 'received',
+      }
+      this.contacts[this.currentChat].messages.push(newResponse)
+     }, 3000);
     },
 
     isVisible(filtraggio){
@@ -128,3 +137,4 @@ const app = new Vue({
   },
   },
 });
+
