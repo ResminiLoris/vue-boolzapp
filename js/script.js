@@ -114,15 +114,17 @@ const app = new Vue({
       this.contacts[this.currentChat].messages.push(newText);
       this.newMessage="";
 
-      setTimeout(function(){ 
-      newResponse = {
-        date: '10/1/2020 16:15:22',
-        message: "ok",
-        status: 'received',
-      }
-      this.contacts[this.currentChat].messages.push(newResponse)
-     }, 3000);
+      setTimeout(()=>{
+        const answerText = {
+          status: 'received',
+          message: 'ok',
+          date: '10/01/2020 16:15:22',
+        }
+      this.contacts[this.currentChat].messages.push(answerText);
+      },1000)
     },
+    
+  
 
     isVisible(filtraggio){
       var result = false;
